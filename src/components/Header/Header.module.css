@@ -1,0 +1,7 @@
+.Header{
+	background-color: #ff323d;
+	color: white;
+	flex-basis: 3rem;
+	font-size: larger;
+	font-weight: bold;
+}

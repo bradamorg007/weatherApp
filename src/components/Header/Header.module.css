@@ -5,11 +5,15 @@
 	font-size: larger;
 	font-weight: bold;
 	display: flex;
-    align-items: center;
+	align-items: center;
+	padding-left: 1rem;
 }
 
-.ANDLogo {
-	width: 19%;
-	margin-right: 2%;
-	margin-left: 2%;
+.HeaderLogo {
+    width: 6rem;
+    margin-right: 0.5rem;
+}
+
+.HeaderText {
+	font-size: 1.6rem;
 }

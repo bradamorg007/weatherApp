@@ -1,7 +1,30 @@
-.Footer{
-	background-color: #282c34;
+/* .Footer{
+	background-color: #353535;
 	color: white;
 	flex-basis: 3rem;
 	font-size: larger;
 	font-weight: bold;
+} */
+
+.Footer{
+	background-color: #353535;
+	color: white;
+	flex-basis: 3rem;
+	font-size: larger;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+    padding-right: 1rem;
 }
+
+.FooterLogo {
+    width: 6rem;
+    margin-right: 0.5rem;
+    margin-left: 2%;
+}
+
+.FooterText {
+	font-size: 1.6rem;
+}
+

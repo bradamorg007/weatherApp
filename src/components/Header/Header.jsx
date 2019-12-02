@@ -1,16 +1,15 @@
 import React from 'react';
 import css from './Header.module.css';
+import LogoText from '../LogoText/LogoText';
 
 const Header = () => {
     return (
-        <div className={css.Header}>
-            <img
-                className={css.ANDLogo}
-                src="https://static.andigital.com/wp-content/uploads/2017/05/02163341/AND_LOGO_RGB_ON_WHITE.png"
-                alt="AND Digital" />
-            <span className={css.HeaderText}>Header</span>
-        </div>
 
+        <LogoText divName={css.Header}
+            imgName={css.HeaderLogo}
+            spanName={css.HeaderText}
+            text="Weather"
+        />
     )
 };
 

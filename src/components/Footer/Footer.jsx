@@ -1,12 +1,14 @@
 import React from 'react';
 import css from './Footer.module.css';
+import LogoText from '../LogoText/LogoText';
 
 const Footer = () => {
     return (
-        <div className={css.Footer}>
-            <span>Footer</span>
-        </div>
-
+        <LogoText divName={css.Footer}
+            imgName={css.FooterLogo}
+            spanName={css.FooterText}
+            text="Digital"
+        />
     )
 };
 

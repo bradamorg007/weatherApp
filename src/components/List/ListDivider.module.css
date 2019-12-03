@@ -1,0 +1,9 @@
+.List {
+    width: '100%';
+    max-width: 360%;
+    background-color: white;
+    list-style: none;
+    border: 0.5px solid #ebebeb;
+    flex-direction: column;
+  }
+

@@ -1,20 +1,20 @@
 import React from 'react';
-import css from './WeatherTemp.module.css'
 import rainImg from '../../resources/weatherIcons/rain.png';
+import Icon from '../Icon/Icon';
+import css from './WeatherTemp.module.css'
+
 
 
 const WeatherTemp = (props) => {
 
-    const src = `resources/weatherIcons/${props.imgName}.png`;
-    const alt = `weather icon: ${props.imgName}`;
 
-
+    const temperature = `${props.temperature}°C`;
     return (
         <div className={css.weatherTemp}>
-            <img className={css.img} src={rainImg} alt={alt} />
-            <span className={css.text}>19°C</span>
+            <Icon imgName={props.imgName} />
+            <span className={css.text}>{temperature}</span>
         </div>
-    );
+    )
 };
 
 export default WeatherTemp;

@@ -17,7 +17,7 @@ const WeatherDetails = (props) => {
                     <span className={css.description}>{props.description}</span>
                     <span className={css.probability}>{props.probability}</span>
                 </div>
-                <WeatherTemp imgName={"fog"} />
+                <WeatherTemp imgName={props.icon} temperature={props.temperature} />
             </ListItem>
             {props.renderDivider && <Divider />}
         </div>

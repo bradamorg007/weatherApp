@@ -29,11 +29,12 @@ import { loadOptions } from '@babel/core';
 export default function ListDividers() {
 
     const [weatherData, setWeatherData] = useState();
-    //const [weekInfo] = useWeekArranger();
+    //git const [weekInfo] = useWeekArranger();
     const [location, error] = useGetLocation();
 
     useEffect(() => {
         if (location) {
+            const controller = new AbortController();
             const endPoint = `${"https://lski-proxy-server.azurewebsites.net/weather/"}${location.latitude}/${location.longitude}`;
             Fetch(endPoint)
                 .then((data) => {
@@ -47,22 +48,30 @@ export default function ListDividers() {
                 .catch((error) => {
                     console.log(error);
                 });
-            // setWeatherData(data);
             console.log(location);
+
+            return (
+                controller.abort()
+            );
         }
     }, [location]);
 
+    if (!weatherData) {
+        return null
+    }
     return (
         <List component="nav" className={css.List}>
 
-            {weekInfo.map((data, index) => {
+            {weatherData.map((data, index) => {
                 return (
                     <div>
                         <WeatherDetails
-                            date={data}
-                            description={"Rain all day fam"}
-                            probability={"60% chance of more rain after this rain"}
-                            renderDivider={index < weekInfo.length - 1}
+                            date={data.date}
+                            temperature={data.temperature}
+                            icon={data.icon}
+                            description={data.summary}
+                            probability={`${data.probability}% chance of more rain after this rain`}
+                            renderDivider={index < weatherData.length - 1}
 
                         />
                     </div>

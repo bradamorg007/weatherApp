@@ -15,7 +15,6 @@ function App() {
         <Body>
           <Switch>
             <ListDividers />
-            {/* <span className={css.Span}>Body</span> */}
           </Switch>
         </Body>
         <Footer />

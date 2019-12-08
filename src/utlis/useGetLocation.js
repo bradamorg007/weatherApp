@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const useGetLocation = () => {
 
@@ -14,22 +14,21 @@ const useGetLocation = () => {
             maximumAge: 0
         };
 
-        function successFunc(pos) {
+        const successFunc = (pos) => {
             var crd = pos.coords;
             setData({ latitude: crd.latitude, longitude: crd.longitude })
         }
 
-        function errorFunc(err) {
+        const errorFunc = (err) => {
             setError(error);
             console.warn(`ERROR(${err.code}): ${err.message}`);
         }
 
-        const getLoc = async () => {
-            await navigator
-                .geolocation
-                .getCurrentPosition(successFunc, errorFunc, options);
-        }
-        getLoc();
+
+        navigator
+            .geolocation
+            .getCurrentPosition(successFunc, errorFunc, options);
+
 
     }, []);
 

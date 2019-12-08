@@ -4,7 +4,6 @@ import css from './WeatherDetails.module.css'
 import './WeatherDetails.css'
 import ListItem from '@material-ui/core/ListItem';
 import WeatherTemp from '../WeatherTemp/WeatherTemp';
-import Body from '../Body/Body';
 
 
 const WeatherDetails = (props) => {

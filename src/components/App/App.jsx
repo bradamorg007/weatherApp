@@ -3,8 +3,11 @@ import css from './App.module.css';
 import Body from '../Body/Body';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import NavBar from '../Navbar/NavBar';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import ListDividers from '../List/ListDividers';
+import NewsTable from '../NewsTable/NewsTable';
+import WeatherTable from '../WeatherTable/WeatherTable';
+import PageNotFound from '../Errors/PageNotFound/PageNotFound';
 
 
 function App() {
@@ -12,9 +15,18 @@ function App() {
     <Router>
       <div className={css.App} >
         <Header />
+        <NavBar />
         <Body>
           <Switch>
-            <ListDividers />
+            <Route exact path="/">
+              <NewsTable />
+            </Route>
+            <Route path="/weather">
+              <WeatherTable />
+            </Route>
+            <Route path="*">
+              <PageNotFound />
+            </Route>
           </Switch>
         </Body>
         <Footer />

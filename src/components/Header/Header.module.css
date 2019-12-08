@@ -1,11 +1,11 @@
 .Header{
 	background-color: #ff323d;
 	color: white;
-	flex-basis: 5rem;
+	flex-basis: 3rem;
 	font-size: larger;
 	font-weight: bold;
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
 	padding-left: 1rem;
 }
 

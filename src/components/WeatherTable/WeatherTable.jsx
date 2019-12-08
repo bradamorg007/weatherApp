@@ -1,11 +1,11 @@
 import React from 'react';
 import List from '@material-ui/core/List';
-import css from './ListDivider.module.css';
+import css from './WeatherTable.module.css';
 import '../LoaderSpinner/LoadSpinner.scss';
 import WeatherDetails from '../weatherDetails/WeatherDetails';
 import useGetWeatherData from '../../utlis/useGetWeatherData';
 
-export default function ListDividers() {
+export default function WeatherTable() {
 
     const [weatherData, error] = useGetWeatherData();
 

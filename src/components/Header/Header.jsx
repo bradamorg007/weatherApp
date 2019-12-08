@@ -8,7 +8,7 @@ const Header = () => {
         <LogoText divName={css.Header}
             imgName={css.HeaderLogo}
             spanName={css.HeaderText}
-            text="Weather"
+            text="News & Weather"
         />
     )
 };

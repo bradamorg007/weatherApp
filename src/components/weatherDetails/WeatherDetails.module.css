@@ -1,0 +1,27 @@
+
+.date{
+    font-weight: bolder;
+    margin-bottom: 0.1rem;
+
+}
+
+.description{
+    font-size: 75%;
+    font-weight: lighter;
+    margin-bottom: 0.5rem;
+}
+
+.probability{
+    font-size: 40%;
+    font-weight: lighter;
+}
+
+.weatherDetails{
+    flex-direction: column;
+    align-items: unset;
+}
+
+.weatherText {
+    display: flex;
+    flex-direction: column;
+}

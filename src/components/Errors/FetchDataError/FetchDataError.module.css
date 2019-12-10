@@ -1,0 +1,8 @@
+.FetchError{
+    display: flex;
+    justify-content: center;
+    margin-top: 34vh;
+    color: tomato;
+    font-size: 6vw;
+    font-weight: bold;
+}

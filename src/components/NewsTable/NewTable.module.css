@@ -1,0 +1,16 @@
+.List {
+    width: '100%';
+    max-width: 360%;
+    background-color: white;
+    list-style: none;
+    border: 0.5px solid #ebebeb;
+    flex-direction: column;
+  }
+
+
+  @media only screen and (max-device-width : 767px){
+
+    .List{
+      border: none;
+    }
+  }

@@ -2,17 +2,18 @@
 .date{
     font-weight: bolder;
     margin-bottom: 0.1rem;
+    font-size: 90%;
 
 }
 
 .description{
-    font-size: 75%;
+    font-size: 55%;
     font-weight: lighter;
     margin-bottom: 0.5rem;
 }
 
 .probability{
-    font-size: 40%;
+    font-size: 30%;
     font-weight: lighter;
 }
 

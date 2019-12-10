@@ -1,5 +1,5 @@
 
-const dataMapper = (input) => {
+export const mapWeather = (input) => {
 
     return {
         temperature: Math.round(input.apparentTemperatureHigh + input.apparentTemperatureLow / 2),
@@ -9,4 +9,12 @@ const dataMapper = (input) => {
     };
 };
 
-export default dataMapper;
+export const mapNews = (input) => {
+    return {
+        title: input.title,
+        url: input.url,
+        urlToImage: input.urlToImage,
+        name: input.source.name
+    }
+}
+

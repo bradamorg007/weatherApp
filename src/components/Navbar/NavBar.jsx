@@ -1,15 +1,17 @@
 import React from 'react';
 import css from './NavBar.module.css';
-import { Link } from 'react-router-dom';
+import './NavBar.css'
+import { NavLink } from 'react-router-dom';
 
 
 const NavBar = () => {
 
     return (
-        <div className={css.NavBar}>
-            <Link to="/">News</Link>
-            <Link to="/weather">Weather</Link>
-        </ div>
+        <nav className={css.NavBar}>
+            < NavLink exact activeClassName="NavActive" to="/">News</ NavLink>
+            <span className={css.Spacer}>.</span>
+            <NavLink exact activeClassName="NavActive" to="/weather" ><span>Weather</span></NavLink>
+        </ nav>
     )
 }
 

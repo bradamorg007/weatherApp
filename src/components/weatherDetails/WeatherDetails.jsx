@@ -6,19 +6,19 @@ import ListItem from '@material-ui/core/ListItem';
 import WeatherTemp from '../WeatherTemp/WeatherTemp';
 
 
-const WeatherDetails = (props) => {
+const WeatherDetails = ({ key, date, description, temperature, probability, icon, renderDivider }) => {
 
     return (
         <div className="WeatherDetails">
-            <ListItem button className={css.weatherDetails}>
+            <ListItem button className={css.weatherDetails} key={key}>
                 <div className={css.weatherText}>
-                    <span className={css.date}>{props.date}</span>
-                    <span className={css.description}>{props.description}</span>
-                    <span className={css.probability}>{props.probability}</span>
+                    <span className={css.date}>{date}</span>
+                    <span className={css.description}>{description}</span>
+                    <span className={css.probability}>{probability}</span>
                 </div>
-                <WeatherTemp imgName={props.icon} temperature={props.temperature} />
+                <WeatherTemp imgName={icon} temperature={temperature} />
             </ListItem>
-            {props.renderDivider && <Divider />}
+            {renderDivider && <Divider />}
         </div>
     );
 };

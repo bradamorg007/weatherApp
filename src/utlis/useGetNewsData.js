@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Fetch from './Fetch';
 import { mapNews } from './dataMapper';
-
+import config from '../config';
 
 const useGetNewsData = () => {
 

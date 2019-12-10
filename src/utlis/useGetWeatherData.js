@@ -2,13 +2,18 @@ import { useState, useEffect } from 'react';
 import moment from 'moment';
 import Fetch from './Fetch';
 import useGetLocation from './useGetLocation';
-import dataMapper from './dataMapper';
+import { mapWeather } from './dataMapper';
 
 
 const useGetWeatherData = () => {
 
     const [weatherData, setWeatherData] = useState();
-    const [location, error] = useGetLocation();
+    const [error, setError] = useState();
+    const [location, locError] = useGetLocation();
+
+    if (locError) {
+        setError(locError)
+    }
 
     useEffect(() => {
         if (location) {
@@ -20,15 +25,14 @@ const useGetWeatherData = () => {
                     const output = [];
                     data.data.daily.data.map((day, index) => {
                         const date = moment().add(index, 'days').format("ddd, DD MMM");
-                        output.push({ ...dataMapper(day), date });
+                        output.push({ ...mapWeather(day), date });
                     })
                     setWeatherData(output);
                 })
                 .catch((error) => {
                     console.log(error);
+                    setError(error);
                 });
-
-            console.log(location);
 
             return (
                 controller.abort()

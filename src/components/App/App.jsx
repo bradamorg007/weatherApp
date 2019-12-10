@@ -3,7 +3,6 @@ import css from './App.module.css';
 import Body from '../Body/Body';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import NavBar from '../Navbar/NavBar';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NewsTable from '../NewsTable/NewsTable';
 import WeatherTable from '../WeatherTable/WeatherTable';
@@ -15,7 +14,6 @@ function App() {
     <Router>
       <div className={css.App} >
         <Header />
-        <NavBar />
         <Body>
           <Switch>
             <Route exact path="/">
